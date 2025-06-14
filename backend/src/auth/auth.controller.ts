@@ -16,16 +16,16 @@ export class AuthController{
     @Post('/signup')
     async handleSignUp(@Body() dto:AuthDtoWithName){
         try {
-            console.log('ASHAHSAHA');
-            
-            this.service.signup(dto);
+            return await this.service.signup(dto);
         } catch (error) {
+            console.error(error);
+            
             throw new HttpException(
                 {
                     message: error.message,
                     error: error.name,
                 },
-                HttpStatus.FORBIDDEN
+                HttpStatus.BAD_REQUEST
             );
         }
     }

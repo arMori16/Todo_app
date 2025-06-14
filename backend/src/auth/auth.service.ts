@@ -42,7 +42,7 @@ export class AuthService{
                     throw new ForbiddenException('Credentials taken!')
                 }
             }
-            throw new error;
+            throw error;
 
         }
     }

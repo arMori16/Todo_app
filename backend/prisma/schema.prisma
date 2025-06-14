@@ -20,7 +20,7 @@ model User{
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  firstName String @unique
+  firstName String 
 
   email String @unique
   atToken String?

@@ -97,7 +97,7 @@ export default function AuthWindow(){
                 )}
                 <form onSubmit={handleSubmit((data)=>handleForm(data))} className={`flex flex-col h-full w-full ${view === 'login'?'mt-[9rem]':'mt-5'}`}>
                     <div className='flex flex-col w-full p-2 h-[3.5rem] custom-xs:h-[2.75rem] bg-gray-300 rounded-md'>
-                        <textarea className='w-full selector h-full bg-transparent outline-none custom-xs:pt-1 custom-xs:text-[0.85rem] flex py-2 overflow-x-scroll overflow-y-hidden whitespace-nowrap scrollbar-hide' placeholder={'Eneter your email'}
+                        <textarea className='w-full selector h-full bg-transparent outline-none custom-xs:pt-1 custom-xs:text-[0.85rem] flex py-2 overflow-x-scroll overflow-y-hidden whitespace-nowrap scrollbar-hide' placeholder={'Enter your email'}
                         {...register('email')}
                         ></textarea>
                     </div>
@@ -113,10 +113,10 @@ export default function AuthWindow(){
                     )}
                     {view === 'signup' && (
                         <div className='flex flex-col'>
-                            <div className={`flex w-full ${errors.email?'':'mt-4'} p-2 custom-xs:p-1 custom-xs:text-[0.85rem] custom-xs:h-[2.75rem] h-[3.5rem] bg-gray-300 rounded-md`}>
+                            <div className={`flex w-full ${errors.password?'':'mt-4'} p-2 custom-xs:p-1 custom-xs:text-[0.85rem] custom-xs:h-[2.75rem] h-[3.5rem] bg-gray-300 rounded-md`}>
                                 <textarea className='w-full h-full bg-transparent outline-none flex py-2 overflow-x-scroll overflow-y-hidden whitespace-nowrap scrollbar-hide' placeholder={`${'Enter your nickname'}`} {...register('firstName')}></textarea>
                             </div>
-                            {(serverError || errors.password) && <div className='flex text-[14px] text-[#E93055] relative ml-2 mt-1'>{errors.password?.message || serverError}</div>}
+                            {(serverError || errors.firstName) && <div className='flex text-[14px] text-[#E93055] relative ml-2 mt-1'>{errors.firstName?.message || serverError}</div>}
                         </div>
                     )}
                     <div className='flex mt-[2.75rem] w-full h-[2.5rem] custom-xs:h-[2rem] custom-xs:mt-[2.25rem] custom-xs:text-[0.85rem] justify-center'>
