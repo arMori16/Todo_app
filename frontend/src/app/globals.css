@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@theme{
+  --color-black-300:#1A1A1A;
+  --color-black-200: #151515;
+  --color-black-100: #101010;
+
+  --color-gray-2E: #2E2E2E;
+  --color-gray-400:#262626;
+  --color-gray-200:#242424;
+  --color-gray-300:#3C3C3C;
+  --color-gray-100:#1B1B1B;
+}
+textarea {
+  resize: none;
+}
